@@ -46,7 +46,10 @@ public abstract class CommonAdapter<T> extends BaseAdapter
     {
         ViewHolder viewHolder = ViewHolder.getViewHolder(context, convertView, parent, layoutId);
 
-        fillData(viewHolder, data.get(position));
+        if(data != null)
+        {
+            fillData(viewHolder, data.get(position));
+        }
 
         return viewHolder.getConvertView();
     }
